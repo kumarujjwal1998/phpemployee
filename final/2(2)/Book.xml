@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Book.css" type="text/css"?>
+
+<Catalog>
+    <Heading>
+        CATALOG
+    </Heading>
+    <Book>
+        <Title>Computer Networks</Title>
+        <Author>Sandhu S.Raman</Author>
+        <Price>Rs. 500</Price>
+        <Year>1997</Year>
+    </Book>
+        <Book>
+        <Title>DBMS</Title>
+        <Author>Alley</Author>
+        <Price>Rs. 400</Price>
+        <Year>1998</Year>
+    </Book>
+        <Book>
+        <Title>Operating System</Title>
+        <Author>Raman</Author>
+        <Price>Rs. 525</Price>
+        <Year>2004</Year>
+    </Book>
+        <Book>
+        <Title>Compiler Design</Title>
+        <Author>Sumantra</Author>
+        <Price>Rs. 300</Price>
+        <Year>1994</Year>
+    </Book>
+        <Book>
+        <Title>Theory Of Computation</Title>
+        <Author>Randhawa</Author>
+        <Price>Rs. 250</Price>
+        <Year>1997</Year>
+    </Book>
+</Catalog>

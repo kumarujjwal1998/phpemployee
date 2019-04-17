@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration Form
+         </title>
+         <link href="Style.css" rel="stylesheet"></link>
+         <script type="text/javascript">
+            function validation()
+            {
+                var emailID=document.getElementById("myemail").value;
+                var phone=document.getElementById("myphone").value;
+                var findat=emailID.indexOf("@");
+                var finddot=emailID.indexOf(".");
+                if(phone.length<10)
+                {
+                    alert("Please Enter Valid Phone Number");
+                    return false;
+                }
+                else if((finddot-findat)<2||findat<2)
+                {
+                    alert("Please Enter A Valid Email Address");
+                    return false;
+                }
+                else
+                {
+                    alert(findat+finddot);
+                    return true;
+                }
+            }
+         </script>
+    </head>
+    <body>
+        <div class="myrow">
+            <center>
+                <h1>Registration Form</h1>
+                <form id="mydiv" action="Success.html" method="POST">
+                    <label>First Name :</label>
+                    <input type="text" placeholder="" size="20" required></input></br>
+                    <label>Last Name &nbsp;:</label>
+                    <input type="text" placeholder="" size="20" required></input></br>
+                    <label>Department :</label>
+                    <input type="text" placeholder="" size="20" required></input></br>
+                    <label>Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input id="myemail" type="email" placeholder="" size="20" required></input></br>
+                    <label>Phone :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input id="myphone" type="number" placeholder="" size="20" required></input></br>
+                    <button class="mybutton" type="reset">Reset</button></br>
+                    <button class="mybutton" type="submit" onclick="return validation()">Submit</button></br>
+                </form>
+            </center>
+        </div>
+
+    </body>
+</html>

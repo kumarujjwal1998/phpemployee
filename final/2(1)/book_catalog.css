@@ -1,0 +1,31 @@
+CATALOG {
+	background-image: url(1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+BOOK {
+display: block;
+margin-left:30px;
+}
+TITLE {
+color: #dfe6e9;
+display: block;
+font-size: 40px;
+font-style: italic;
+}
+AUTHOR {
+display: block;
+color: #607D8B;
+font-size: 20px;
+font-style: italic;
+}
+YEAR, PRICE {
+color:#FF9800;
+display: block;
+}
+HEADING {
+	margin-left: 540px;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="/home/bluebricks/Documents/a2/book_catalog.css"?>
+<CATALOG>
+<HEADING>Books Catalog</HEADING>
+<BOOK>
+<TITLE>Database Management System</TITLE>
+<AUTHOR>-Korth</AUTHOR>
+<PRICE>Price : 500</PRICE>
+<YEAR>Year :1985</YEAR>
+</BOOK>
+
+<BOOK>
+<TITLE>Computer Network</TITLE>
+<AUTHOR>-Tenenbaum</AUTHOR>
+<PRICE>Price : 600</PRICE>
+<YEAR>Year : 1985</YEAR>
+</BOOK>
+
+<BOOK>
+<TITLE>Operating System</TITLE>
+<AUTHOR>-Peter Baer Galvin</AUTHOR>
+<PRICE>Price : 500</PRICE>
+<YEAR>Year :1985</YEAR>
+</BOOK>
+
+<BOOK>
+<TITLE>Data Structures and Algorithms</TITLE>
+<AUTHOR>-Niklaus Wirth</AUTHOR>
+<PRICE>Price : 600</PRICE>
+<YEAR>Year : 1985</YEAR>
+</BOOK>
+
+<BOOK>
+<TITLE>Software Engineering and project Management</TITLE>
+<AUTHOR>-Roger Pressman</AUTHOR>
+<PRICE>Price : 600</PRICE>
+<YEAR>Year : 1985</YEAR>
+</BOOK>
+</CATALOG>

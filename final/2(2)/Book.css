@@ -1,0 +1,31 @@
+
+Author,Price,Year
+{
+    display: block;
+}
+Title
+{
+    font-size: 20px;
+    font-weight: bolder;
+}
+Heading
+{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-left: 43%;
+    font-family: monospace;
+}
+Catalog
+{
+    width: 100%;
+    text-align: center;
+}
+Book
+{
+    background-color: lightgray;
+    font-family: cursive;
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+    
+}

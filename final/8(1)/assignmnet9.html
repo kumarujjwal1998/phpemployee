@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app = "billpayApp">
+<head>
+    <title>Assignment9</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script>
+        
+        var model={
+            customer : "student",
+            items : [
+                {
+                    bill : "electricity",
+                    status : false
+                },
+                {
+                    bill : "Internet",
+                    status : false
+                },
+                {
+                    bill : "parking charges",
+                    status : false
+                },
+                {
+                    bill : "phone",
+                    status : false
+                },
+                {
+                    bill : "tax",
+                    status : true
+                }
+            ]
+        }
+
+        var billpayApp = angular.module("billpayApp",[]);
+        billpayApp.controller("billpayctrl",function($scope){
+
+            $scope.billpay = model;
+            
+            $scope.duebills = function(){   
+                var items = $scope.billpay.items;
+                var counter=0;
+                items.forEach((item) => {
+                    if(!item.status)
+                        counter++;
+                });
+                return counter;
+            }
+
+            $scope.redflag = function(){
+                return $scope.duebills() <= 2 ? "label-success" : "label-danger"; 
+            }
+
+            $scope.addbills = function(billname){
+                obj = {
+                    bill : billname,
+                    status : false
+                }
+                $scope.billpay.items.push(obj);
+            }
+
+            $scope.removebills = function(rmvbills){
+                $scope.billpay.items.splice($scope.billpay.items.indexOf(rmvbills),1);
+            }
+
+        });
+    </script>
+</head>
+<body ng-controller="billpayctrl">
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                {{billpay.customer}}'s bills remained to be paid- 
+                <span class="lable" ng-class="redflag()" ng-hide="duebills()==0">
+                    {{duebills()}}
+                </span>
+            </h1>
+        </div>
+        <h3><center><b>Add extra fields if any</b></center></h3>
+        <div class="panel">
+            <div class="input-group">
+                <input class="form-control" ng-model="billname" />
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" ng-click="addbills(billname)">ADD</button>
+                </span>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Bill name</th>
+                        <th>status</th>
+                        <th>status</th>
+                        <th>close</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat = "item in billpay.items" ng-model="item">
+                        <td>{{item.bill}}</td>
+                        <td><input type="checkbox" ng-model="item.status" /></td>
+                        <td>{{item.status}}</td>
+                        <td>
+                            <button type="button" ng-click="removebills(item)">X</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>

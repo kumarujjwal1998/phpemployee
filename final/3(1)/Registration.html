@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>regform</title>
+<link href="/home/bluebricks/Desktop/a4/samp.css" rel="stylesheet"></link>
+<script type="text/javascript">
+function Validation() {
+var email = document.myForm.EMail.value;
+var phoneNum = document.myForm.ph.value;
+var phone = phoneNum.replace(/[^\d]/g, '');
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+	if(phone.length > 6 && phone.length < 11)
+		return true;
+	else  {
+		alert("You have entered an invalid phone number!")
+		return false;
+	}
+}
+else {
+	alert("You have entered an invalid email address!")
+    return (false)
+}
+}
+</script>
+</head>
+<body>
+<div class="con">
+<form name="myForm" action="display.html" method="get" align="center">
+<table align="center">
+<tr><td><br><h1 class="head">Welcome to Registration Page</h1></td></tr>
+</table>
+<div class="con1">
+<table align="center">
+<tr>
+<th>Full Name:</th>
+<td><input type="text" id="FirstName" value="" required></input></td>
+</tr>
+<tr>
+<th>Department:</th>
+<td><input type="text" id="Department" required></input></td>
+</tr>
+<tr>
+<th>Address:</th>
+<td><textarea row="3" column="2" required></textarea></td>
+</tr>
+<tr>
+<th>email Id:</th>
+<td><input type="text" value="" id="EMail" required></input></td>
+</tr>
+<tr>
+<th>phone no:</th>
+<td><input type="text" id="ph" required></input></td>
+</tr>
+</table>
+<br>
+<table align="center">
+<td><input class="but"  type="submit" value="SUBMIT" onclick="return (Validation());"></td>
+<td><input class="but"  type="reset" value="CANCEL"></td>
+</tr>
+</table>
+</div>
+</form>
+</div>
+</body>
+</html>
